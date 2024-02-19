@@ -18,14 +18,14 @@ async function warriorJump() {
     let startPosition = 12;
     let endPosition = 15;
     let tmpPosition = 12;
-    warriorImg.setAttribute('src', '/images/jump.png');
+    warriorImg.setAttribute('src', '/Gameplay-main/images/jump.png');
     while (tmpPosition <= endPosition) {
         tmpPosition += 0.1;
         warrior.style.bottom = tmpPosition + 'rem';
         await timeWaiting(10);
     }
 
-    warriorImg.setAttribute('src', '/images/attack.png');
+    warriorImg.setAttribute('src', '/Gameplay-main/images/attack.png');
     dragonHp -= randomAttack();
     if(dragonHp <= 0) {
         dragonHp = 0;
@@ -41,18 +41,18 @@ async function warriorJump() {
         await timeWaiting(10);
     }
 
-    warriorImg.setAttribute('src', 'normal.png');
+    warriorImg.setAttribute('src', '/Gameplay-main/images/normal.png');
 }
 
 async function warriorMoveBackwards() {
     let tmpPosition = 39;
     let endPosition = 5;
-    warriorImg.setAttribute('src', '/images/n-b.png');
+    warriorImg.setAttribute('src', '/Gameplay-main/images/n-b.png');
     while (tmpPosition >= endPosition) {
         tmpPosition -= 0.2;
         warrior.style.left = tmpPosition + 'rem';
         await timeWaiting(1);
     }
 
-    warriorImg.setAttribute('src', '/images/normal.png');
+    warriorImg.setAttribute('src', '/Gameplay-main/images/normal.png');
 }
