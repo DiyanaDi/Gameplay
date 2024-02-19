@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="game-box">
+            <div class="winner" id="winner">
+                
+            </div>
+            <div class="warrior" id="warrior">
+                <img src="/images/normal.png" id="warrior-image" alt="">
+            </div>
+            <button class="warrior-attack" onclick="warriorAttack()">Warrior Attack</button>
+            <div class="hp-bar warrior-hp-bar">
+                <div id="warrior-hp">
+                </div>
+            </div>
+            <div class="hp-bar dragon-hp-bar">
+                <div id="dragon-hp">
+                </div>
+            </div>
+            <div class="dragon" id="dragon">
+                <img src="/images/dragon-normal.png" id="dragon-image" alt="">
+            </div>
+            <button class="dragon-attack" onclick="dragonAttack()">Dragon Attack</button>
+        </div>
+        
+        <script>
+            function timeWaiting(delayInms) {
+                return new Promise(resolve => {
+                    setTimeout(() => {
+                        resolve(2);
+                    }, delayInms);
+                });
+            }
+
+            function randomAttack() {
+                return Math.floor(Math.random() * 100);
+            }
+        </script>
+        <script src="variables.js"></script>
+        <script src="warrior.js"></script>
+        <script src="dragon.js"></script>
+    </body>
+</html>
