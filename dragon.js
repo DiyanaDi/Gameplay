@@ -8,11 +8,11 @@ async function dragonAttack() {
         await timeWaiting(1);
     }
 
-    dragonImg.setAttribute('src', '/images/dragon-attack-1.png');
+    dragonImg.setAttribute('src', '/Gameplay-main/images/dragon-attack-1.png');
     await timeWaiting(250);
-    dragonImg.setAttribute('src', '/images/dragon-attack-2.png');
+    dragonImg.setAttribute('src', '/Gameplay-main/images/dragon-attack-2.png');
     await timeWaiting(250);
-    dragonImg.setAttribute('src', '/images/dragon-attack-1.png');
+    dragonImg.setAttribute('src', '/Gameplay-main/images/dragon-attack-1.png');
     await timeWaiting(250);
 
     warriorHp -= randomAttack();
@@ -24,7 +24,7 @@ async function dragonAttack() {
 
     warriorHpElement.style.width = warriorHp + '%';
     
-    dragonImg.setAttribute('src', '/images/d-b.png');
+    dragonImg.setAttribute('src', '/Gameplay-main/images/d-b.png');
     endPosition = 5;
     while(endPosition <= tmpPosition) {
         tmpPosition -= 0.2;
@@ -32,5 +32,5 @@ async function dragonAttack() {
         await timeWaiting(1);
     }
 
-    dragonImg.setAttribute('src', '/images/dragon-normal.png');
+    dragonImg.setAttribute('src', '/Gameplay-main/images/dragon-normal.png');
 }
